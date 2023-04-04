@@ -1,0 +1,30 @@
+<div class="product_search">
+    <p>Search your product here!</p>
+    <input type="text" id="p-code" name="p_code">
+</div>
+<form #updateProduct="ngForm" class="products" (submit)="onSubmit(updateProduct.value)">
+
+    <span></span>
+
+        <label for="p_name">Product Name</label>
+        <input type="text" id="p_name" name="p_name" ngModel>
+
+        <label for="hsn_code">HSN</label>
+        <input type="text" id="hsn_code" name="hsn_code" ngModel>
+
+        <label for="p_mrp">MRP</label>
+        <input type="text" id="p_mrp" name="p_mrp" ngModel>
+
+        <label for="p_uprice">Unit Price</label>
+        <input type="text" id="p_uprice" name="p_uprice" ngModel>
+
+        <label for="p_sgst">SGST</label>
+        <input type="text" id="p_sgst" name="p_sgst" ngModel>
+
+        <label for="p_cgst">CGST</label>
+        <input type="text" id="p_cgst" name="p_cgst" ngModel>
+
+        <button type="submit">Update</button>
+
+
+</form>

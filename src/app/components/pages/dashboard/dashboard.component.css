@@ -1,0 +1,42 @@
+.main{
+    height: 400px;
+    width: 100%;
+    margin: 0px;;
+}
+
+header{
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 40px;
+}
+
+.dashboard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dashboard{
+    color: rgba(225, 106, 106, 0.976);
+    font-size:20px;
+}
+
+.containers{
+    width: 200px;
+    height: 100px;
+    position: relative;
+    top:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    padding:20px;
+    background-color: rgb(255, 245, 245);
+}
+.containers:hover{
+    background-color: rgb(255, 182, 182);
+    transition: .5s;
+    cursor: pointer;
+}
