@@ -4,27 +4,31 @@
     <span></span>
 
         <label for="p_name">Product Name</label>
-        <input type="text" id="p_name" name="p_name" ngModel>
+        <input type="text" id="p_name" name="productName" [(ngModel)]="productName">
 
         <label for="p_name">Bar code</label>
-        <input type="text" id="bar_code" name="bar_code" ngModel>
+        <input type="text" id="bar_code" name="barCode" [(ngModel)]="barCode">
 
         <label for="hsn_code">HSN</label>
-        <input type="text" id="hsn_code" name="hsn_code" ngModel>
+        <input type="text" id="hsn_code" name="hsnCode" [(ngModel)]="hsnCode">
 
         <label for="p_mrp">MRP</label>
-        <input type="text" id="p_mrp" name="p_mrp" ngModel>
+        <input type="text" id="p_mrp" name="productMrp" [(ngModel)]="productMrp">
 
         <label for="p_uprice">Unit Price</label>
-        <input type="text" id="p_uprice" name="p_uprice" ngModel>
+        <input type="text" id="p_uprice" name="productUnitPrice" [(ngModel)]="productUnitPrice">
 
         <label for="p_sgst">SGST</label>
-        <input type="text" id="p_sgst" name="p_sgst" ngModel>
+        <input type="text" id="p_sgst" name="productSGST" [(ngModel)]="productSGST">
 
         <label for="p_cgst">CGST</label>
-        <input type="text" id="p_cgst" name="p_cgst" ngModel>
+        <input type="text" id="p_cgst" name="productCGST" [(ngModel)]="productCGST">
 
         <button type="submit">Add</button>
 
 
 </form>
+
+<div *ngIf="saveSuccesful">
+    <span>Data saved successfully</span>
+</div>

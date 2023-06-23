@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { AddProductsService } from '../../services/add-products.service';
+import { ProductsService } from '../../services/products.service';
+import { NgForm } from '@angular/forms';
+import { ProductReqModel } from 'src/app/models/ProductReqModel';
 
 @Component({
   selector: 'app-add-products',
@@ -8,13 +10,34 @@ import { AddProductsService } from '../../services/add-products.service';
 })
 export class AddProductsComponent {
 
-  constructor(private AddProduct: AddProductsService){
+  productName='';
+  barCode='';
+  hsnCode='';
+  productMrp='';
+  productUnitPrice='';
+  productSGST='';
+  productCGST='';
+  saveSuccesful: boolean = false;
+
+  constructor(private productService: ProductsService){
 
   }
 
-  onSubmit(value: any){
-    this.AddProduct.saveProduct(value).subscribe((res: any) =>{
-      console.log(res.message);
+  onSubmit(formValue: ProductReqModel) {
+    console.log(formValue);
+    const productReqObj = new ProductReqModel();
+    productReqObj.productName = formValue.productName;
+    productReqObj.barCode = formValue.barCode;
+    productReqObj.hsnCode = formValue.hsnCode;
+    productReqObj.productMrp = formValue.productMrp;
+    productReqObj.productUnitPrice = formValue.productUnitPrice;
+    productReqObj.productCGST = formValue.productCGST;
+    productReqObj.productSGST = formValue.productSGST;
+    this.productService.addProduct(productReqObj).subscribe(data =>{
+       console.log("Service Working");
+       if(data){
+       this.saveSuccesful = true;
+       }
     })
   }
 }

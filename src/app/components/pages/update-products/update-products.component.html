@@ -1,6 +1,6 @@
 <div class="product_search">
     <p>Search your product here!</p>
-    <input type="text" id="p-code" name="p_code">
+    <input #search type="text" id="p-code" name="p_code" [(ngModel)]="barcode" (keyup.enter)="onSearch(search.value)">
 </div>
 <form #updateProduct="ngForm" class="products" (submit)="onSubmit(updateProduct.value)">
 

@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { AddProductsService } from '../../services/add-products.service';
-import { Product } from 'src/app/models/product';
+import { ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'app-inventory',
@@ -8,9 +7,9 @@ import { Product } from 'src/app/models/product';
   styleUrls: ['./inventory.component.css']
 })
 export class InventoryComponent {
-
-  products:Product[] = []
-  constructor(private addProd: AddProductsService){
-    this.products = this.addProd.getAll();
+  
+  products:any;
+  constructor(private productService: ProductsService){
+    this.products = this.productService.getSavedProducts();
   }
 }

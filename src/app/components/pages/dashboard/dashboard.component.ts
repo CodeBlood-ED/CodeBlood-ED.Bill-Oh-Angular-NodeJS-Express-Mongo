@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -8,7 +10,9 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent {
 
-  constructor(private router:Router) {
+  getProductsSubscription = new Subscription();
+
+  constructor(private router:Router,private productService: ProductsService) {
 
   }
 
@@ -20,6 +24,10 @@ export class DashboardComponent {
   }
   onClick(){
     this.router.navigate(['/inventory']);
+    this.getProductsSubscription = this.productService.getAllProducts().subscribe( data =>{
+      console.log('Getting all products');
+      this.productService.saveAllProducts(data);
+    })
   }
 
 }
