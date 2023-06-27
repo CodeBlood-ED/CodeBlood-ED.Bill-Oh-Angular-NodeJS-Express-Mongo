@@ -7,3 +7,21 @@ body{
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --font-pecita: Pecita;
+    --font-inter: Inter;
+  
+    /* Colors */
+    --color-indianred-100: rgba(225, 106, 106, 0.3);
+    --color-indianred-200: rgba(225, 106, 106, 0.18);
+    --color-black: #000;
+  }
+
+  
+  

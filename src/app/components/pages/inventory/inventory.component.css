@@ -1,4 +1,47 @@
-body{
-    height:80%;
-    width:100%;
+.table{
+    width:80%;
+    height:50%;
+    position: relative;
+    margin-top:5%;
+    left:10%;
+    bottom:10%;
+    border-top: 4px rgba(225, 106, 106, 0.976) solid;
+    border-radius: 5px;
+    overflow-y: scroll;
+}
+
+.table-columns{
+    height:50px;
+    background-color: rgb(255, 245, 245);
+    border-bottom: 4px rgba(225, 106, 106, 0.976) solid;
+    position: relative;
+    display: flex;
+}
+
+.table-content-columns{
+    height:50px;
+    border-bottom: 1px solid #000;
+    position: relative;
+    display: flex;
+}
+
+.column-grid{
+    background-color: transparent;
+    width:25%;
+
+    height:50px;
+    text-align: center;
+    font-weight: 400;
+}
+.column-content-grid{
+    background-color: transparent;
+    width:25%;
+
+    height:50px;
+    text-align: center;
+    font-weight: 200;
+}
+span{
+    position:relative;
+    top:15px;
 }

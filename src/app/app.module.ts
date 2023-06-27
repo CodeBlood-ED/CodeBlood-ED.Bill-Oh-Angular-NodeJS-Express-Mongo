@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddProductsComponent } from './components/pages/add-products/add-products.component';
 import { InventoryComponent } from './components/pages/inventory/inventory.component';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { HomeComponent } from './components/partials/home/home.component';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
     DashboardComponent,
     UpdateProductsComponent,
     AddProductsComponent,
-    InventoryComponent
+    InventoryComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

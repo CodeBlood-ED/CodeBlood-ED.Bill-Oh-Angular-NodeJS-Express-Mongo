@@ -1,4 +1,22 @@
+<div class="table">
+    <div class="table-columns">
+        <div class="column-grid" *ngFor="let colNames of this.coloumnNames">
+            <span>{{colNames}}</span>
+        </div>
+    </div>
 
-<ul *ngFor="let product of this.products">
-    <li>{{product.productName}}</li>
-</ul>
+    <div class="table-content-columns" *ngFor="let p of this.products">
+        <div class="column-content-grid">
+            <span>{{p.productName}}</span>
+        </div>
+        <div class="column-content-grid">
+            <span>{{p.productMrp}}</span>
+        </div>
+        <div class="column-content-grid">
+            <span>{{p.productUnitPrice}}</span>
+        </div>
+        <div class="column-content-grid">
+            <span>{{p.productHsnCode}}</span>
+        </div>
+    </div>
+</div>
